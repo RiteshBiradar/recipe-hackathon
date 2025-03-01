@@ -1,14 +1,16 @@
-const allowedOrigins = require("./allowedOrigins");
+const allowedOrigins = ["https://recipe-hackathon-x47j.vercel.app"]; // Add your frontend URL
 
 const corsOptions = {
   origin: (origin, callback) => {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
     }
   },
-  optionsSuccessStatus: 200,
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true, // Allow cookies & auth headers
+  allowedHeaders: "Content-Type,Authorization",
 };
 
 module.exports = corsOptions;
