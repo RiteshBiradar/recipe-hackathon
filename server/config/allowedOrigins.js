@@ -1,6 +1,6 @@
 const allowedOrigins = [
-  "https://recipe-livid-omega.vercel.app",
-  "https://recipe-backend-two.vercel.app",
+  "https://recipe-hackathon-x47j.vercel.app/",
+  "https://vercel.com/ritesh-biradars-projects/recipe-hackathon",
 ];
 
 // const allowedOrigins = [
