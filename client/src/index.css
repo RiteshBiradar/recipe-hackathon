@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #fff8f8; /* Soft Cream */
+  scroll-behavior: smooth;
+}
+
+nav .active {
+  @apply border-b-[2px] border-[#E67E22]; /* Pumpkin Orange */
+}
+
+.box {
+  @apply max-w-7xl mx-auto px-6 mb-8 md:mb-10;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-[#5D4037]; /* Cocoa Brown */
+}
+
+::-webkit-scrollbar {
+  @apply w-2 bg-[#F4C724]; /* Honey Yellow */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply border-4 bg-[#FFF8E1]; /* Creamy White */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply border-2 border-[#E67E22] bg-[#E67E22]; /* Pumpkin Orange */
+}
+
+.MuiDataGrid-root {
+  @apply border-none;
+}
+
+.MuiDataGrid-cell {
+  @apply border-none;
+}
+
+.MuiDataGrid-columnHeaders {
+  @apply border-2 border-[#E67E22] bg-[#FFF8E1]; /* Creamy White */
+}
+
+.MuiDataGrid-columnHeaders .MuiSvgIcon-root,
+.MuiDataGrid-cellCheckbox .MuiSvgIcon-root {
+  font-size: large !important;
+  @apply text-[#E67E22]; /* Pumpkin Orange */
+}
+
+.MuiDataGrid-toolbarContainer .MuiButton-text {
+  @apply text-[#5D4037]; /* Cocoa Brown */
+  font-size: smaller !important;
+}
+
+.MuiDataGrid-footerContainer {
+  @apply border-none bg-[#FFF8E1]; /* Creamy White */
+}
+
+input:invalid[focused="true"] {
+  @apply border-red-500;
+}
+
+input:invalid[focused="true"] ~ span {
+  @apply block;
+}
