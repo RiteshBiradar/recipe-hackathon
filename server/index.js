@@ -11,9 +11,15 @@ const connectDB = require("./db/conn");
 const app = express();
 const port = process.env.PORT || 5000;
 
-// cors middleware
-app.use(credentials);
-app.use(cors(corsOptions));
+// // cors middleware
+// app.use(credentials);
+// app.use(cors(corsOptions));
+
+app.use(cors({
+  origin: "https://recipe-hackathon-x47j.vercel.app", // Your frontend URL
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true,
+}));
 
 app.use(express.urlencoded({ extended: false }));
 
