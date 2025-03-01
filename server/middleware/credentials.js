@@ -1,4 +1,4 @@
-const allowedOrigins = require("../config/allowedOrigins");
+const allowedOrigins = ["https://recipe-hackathon-x47j.vercel.app"]; // Allow frontend URL
 
 const credentials = (req, res, next) => {
   const origin = req.headers.origin;
